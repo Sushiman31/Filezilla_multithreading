@@ -1,9 +1,12 @@
 import sys
+import os
 from directory_manager import DirectoryManager
 from get_parameters import get_user_parameters
 
 if len(sys.argv) == 1:
-    sys.argv.extend(("localhost,test,test,/test,21", "C:/Cours/4e_annee/Semestre_2/Programmation_Parallèle_et_distribue/projet/FTPServerLocal", "2", "30",))
+    current_dir = os.path.realpath(os.path.dirname(__file__))
+    local_dir = current_dir[:-11] + "FTPServerLocal"
+    sys.argv.extend(("localhost,test,test,/test,21", local_dir, "2", "30",))
 
 if __name__ == "__main__":
     # get parameters from command line

@@ -11,25 +11,30 @@ class Logger(object):
 
     @staticmethod
     def log_debug(msg):
-        logging.config.fileConfig("log.conf")
+        log_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'log.conf')
+        logging.config.fileConfig(log_file_path)
         logging.debug(msg)
 
     @staticmethod
     def log_info(msg):
-        logging.config.fileConfig("log.conf")
+        log_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'log.conf')
+        logging.config.fileConfig(log_file_path)
         logging.info(msg)
 
     @staticmethod
     def log_warning(msg):
-        logging.config.fileConfig("log.conf")
+        log_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'log.conf')
+        logging.config.fileConfig(log_file_path)
         logging.warning(msg)
 
     @staticmethod
     def log_error(msg):
-        logging.config.fileConfig("log.conf")
+        log_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'log.conf')
+        logging.config.fileConfig(log_file_path)
         logging.error(msg)
 
     @staticmethod
     def log_critical(msg):
-        logging.config.fileConfig("log.conf")
+        log_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'log.conf')
+        logging.config.fileConfig(log_file_path)
         logging.critical(msg)
